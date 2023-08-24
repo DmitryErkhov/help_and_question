@@ -186,9 +186,9 @@ class _DetailAnswerQuestionScreenState extends State<DetailAnswerQuestionScreen>
                         viewFull= !viewFull;
                       });
                     },
-                    child: viewFull ? const Row(
+                    child: viewFull ? Row(
                       children: [
-                        Text(
+                        const Text(
                           'Скрыть',
                           style: TextStyle(
                             color: Color(0xff667085),
@@ -196,11 +196,15 @@ class _DetailAnswerQuestionScreenState extends State<DetailAnswerQuestionScreen>
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        Icon(Icons.arrow_drop_up, color: Color(0xff667085), size: 16,),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Image.asset('assets/images/chevron-up.png', width: 16, height: 16,),
+                        ),
+                        //Icon(Icons.arrow_drop_up, color: Color(0xff667085), size: 16,),
                       ],
-                    ) : const Row(
+                    ) : Row(
                       children: [
-                        Text(
+                        const Text(
                           'Показать полностью',
                           style: TextStyle(
                             color: Color(0xff667085),
@@ -208,7 +212,11 @@ class _DetailAnswerQuestionScreenState extends State<DetailAnswerQuestionScreen>
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        Icon(Icons.arrow_drop_down, color: Color(0xff667085), size: 16,),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4),
+                          child: Image.asset('assets/images/chevron-down.png', width: 16, height: 16,),
+                        ),
+                        // Icon(Icons.arrow_drop_down, color: Color(0xff667085), size: 16,),
                       ],
                     ),
                   ),
